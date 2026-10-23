@@ -26,6 +26,12 @@
 - ต้องพิสูจน์ว่าไฟล์งานถูกสร้างจริง (อ่าน/list ไฟล์จริง) ก่อนรายงานว่าสำเร็จ
 - รายงานผลตรวจสอบ/การทดสอบที่รันจริง (ผ่าน/ไม่ผ่าน) + ข้อจำกัดที่ทราบ
 
+### Commit และ Push
+
+- **GitHub:** ใช้เครื่องมือ `/mnt/backup/GIT/Ex1-Kore/Bot-GitHub-Manager` สำหรับ commit และ push ไปที่ `https://github.com/Ex1-Kore/Micro-Beyblade`
+- **Gitea:** commit และ push ไปที่ `https://github.com/Ex1-Kore/Micro-Beyblade` โดยใช้ key จาก `/mnt/backup/GIT/Ex1-Kore/Micro-Beyblade/.env` เท่านั้น ห้ามแสดงหรือบันทึกค่า key
+- ห้ามเดา เปลี่ยน หรือเลือกปลายทางอื่นเอง หากไม่แน่ใจว่าให้ใช้รายการใด ให้ถามก่อน
+
 ---
 
 ## 3. สถาปัตยกรรม

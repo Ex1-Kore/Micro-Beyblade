@@ -97,6 +97,12 @@ npm run build          # production build (standalone)
 npm start              # node .next/standalone/server.js
 ```
 
+## Commit และ Push
+
+- **GitHub:** ใช้เครื่องมือ `/mnt/backup/GIT/Ex1-Kore/Bot-GitHub-Manager` สำหรับ commit และ push ไปที่ `https://github.com/Ex1-Kore/Micro-Beyblade`
+- **Gitea:** commit และ push ไปที่ `https://github.com/Ex1-Kore/Micro-Beyblade` โดยใช้ key จาก `/mnt/backup/GIT/Ex1-Kore/Micro-Beyblade/.env` เท่านั้น ห้ามแสดงหรือบันทึกค่า key
+- ห้ามเดา เปลี่ยน หรือเลือกปลายทางอื่นเอง หากไม่แน่ใจว่าให้ใช้รายการใด ให้ถามก่อน
+
 ---
 
 ## โครงสร้างโฟลเดอร์
