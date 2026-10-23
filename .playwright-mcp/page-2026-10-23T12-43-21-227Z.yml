@@ -1,0 +1,86 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "BEYBLADE X" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - link "Blades" [ref=e7] [cursor=pointer]:
+          - /url: /projects
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Micro-Beyblade
+        - heading "BEYBLADE X" [level=1] [ref=e14]
+        - paragraph [ref=e15]: Spin. Battle. Win. Explore the latest Beyblade X lineup and join the arena.
+        - generic [ref=e16]:
+          - link "Explore Blades" [ref=e17] [cursor=pointer]:
+            - /url: /projects
+          - link "View All Blades" [ref=e18] [cursor=pointer]:
+            - /url: /projects
+      - alert [ref=e20]:
+        - paragraph [ref=e21]: ตั้งค่าไม่ครบ
+        - paragraph [ref=e22]: NEXT_PUBLIC_THOTH_API_URL is not set — copy .env.example to .env.local and set the CMS API base URL.
+      - generic [ref=e24]:
+        - heading "Product Lines" [level=2] [ref=e25]
+        - paragraph [ref=e26]: Choose your series and build your perfect Beyblade.
+        - generic [ref=e27]:
+          - link "🔵 BX Line Basic series Explore →" [ref=e28] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e29]: 🔵
+            - heading "BX Line" [level=3] [ref=e30]
+            - paragraph [ref=e31]: Basic series
+            - generic [ref=e32]: Explore →
+          - link "🟣 UX Line Ultimate series Explore →" [ref=e33] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e34]: 🟣
+            - heading "UX Line" [level=3] [ref=e35]
+            - paragraph [ref=e36]: Ultimate series
+            - generic [ref=e37]: Explore →
+          - link "🟠 CX Line Custom series Explore →" [ref=e38] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e39]: 🟠
+            - heading "CX Line" [level=3] [ref=e40]
+            - paragraph [ref=e41]: Custom series
+            - generic [ref=e42]: Explore →
+          - link "🛠️ Tools Launchers & accessories Explore →" [ref=e43] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e44]: 🛠️
+            - heading "Tools" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Launchers & accessories
+            - generic [ref=e47]: Explore →
+          - link "✖️ X-Over Project Crossover collabs Explore →" [ref=e48] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e49]: ✖️
+            - heading "X-Over Project" [level=3] [ref=e50]
+            - paragraph [ref=e51]: Crossover collabs
+            - generic [ref=e52]: Explore →
+          - link "🤝 IP Collaborations Licensed editions Explore →" [ref=e53] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=e54]: 🤝
+            - heading "IP Collaborations" [level=3] [ref=e55]
+            - paragraph [ref=e56]: Licensed editions
+            - generic [ref=e57]: Explore →
+      - generic [ref=e59]:
+        - heading "Ready to Battle?" [level=2] [ref=e60]
+        - paragraph [ref=e61]: Browse the full Beyblade X catalog and find your next winning combo.
+        - link "Browse All Blades" [ref=e62] [cursor=pointer]:
+          - /url: /projects
+  - contentinfo [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]: BEYBLADE X
+        - generic [ref=e67]:
+          - link "Instagram" [ref=e68] [cursor=pointer]:
+            - /url: https://www.instagram.com/beyblade_asia/
+          - link "Facebook" [ref=e69] [cursor=pointer]:
+            - /url: https://www.facebook.com/
+          - link "YouTube" [ref=e70] [cursor=pointer]:
+            - /url: https://www.youtube.com/
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: © 2026 Micro-Beyblade. All rights reserved.
+        - paragraph [ref=e73]:
+          - text: Powered by Microtronic
+          - link "© 2026 Microtronic Co., Ltd." [ref=e74] [cursor=pointer]:
+            - /url: https://microtronic.biz/

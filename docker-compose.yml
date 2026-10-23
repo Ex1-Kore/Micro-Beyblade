@@ -1,0 +1,36 @@
+﻿services:
+  db:
+    image: postgres:16-alpine
+    container_name: micro-cms-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: micro_cms
+      POSTGRES_USER: micro_cms
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  cms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: micro-headless-cms
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://micro_cms:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@db:5432/micro_cms?schema=public
+      EXTENSIONS_DIR: /app/extensions
+      EXTENSIONS_WRITE_ENABLED: "false"
+    ports:
+      - "3000:3000"
+    volumes:
+      - cms_extensions:/app/extensions
+      - cms_tmp:/app/tmp
+
+volumes:
+  postgres_data:
+  cms_extensions:
+  cms_tmp:

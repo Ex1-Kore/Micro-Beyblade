@@ -1,0 +1,14 @@
+{
+  "id": "hello-module",
+  "name": "Hello Module",
+  "version": "0.1.0",
+  "apiVersion": "1",
+  "kind": "module",
+  "description": "Reference extension package that shows the smallest complete module: manifest, admin page, and JSON API.",
+  "author": "THOTH Team",
+  "capabilities": ["admin-page", "api"],
+  "entrypoints": {
+    "adminPage": "./admin/page.tsx",
+    "api": "./api/route.ts"
+  }
+}

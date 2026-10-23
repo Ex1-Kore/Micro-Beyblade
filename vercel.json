@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "regions": [
+    "iad1"
+  ],
+  "functions": {
+    "app/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
+}

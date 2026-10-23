@@ -1,0 +1,18 @@
+{
+  "id": "aurora",
+  "name": "Aurora",
+  "version": "0.1.0",
+  "apiVersion": "1",
+  "kind": "theme",
+  "description": "Cool blue theme for the public web app.",
+  "author": "THOTH Team",
+  "tokens": {
+    "primaryColor": "#4f46e5",
+    "accentColor": "#06b6d4",
+    "bgColor": "#ffffff",
+    "textColor": "#0f172a",
+    "fontFamily": "Inter, sans-serif",
+    "layoutStyle": "wide",
+    "mode": "light"
+  }
+}

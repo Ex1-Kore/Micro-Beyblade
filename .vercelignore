@@ -1,0 +1,61 @@
+# Vercel Build Ignore Configuration
+# Files and directories to exclude from Vercel deployments
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+*.doc
+*.docx
+
+# Development
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+.jest/
+coverage/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Build artifacts
+.next/
+dist/
+build/
+*.tsbuildinfo
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Scripts and tools
+scripts/
+tools/
+*.sh
+
+# Other
+*.log
+.cache/
+temp/
+tmp/

@@ -1,0 +1,362 @@
+﻿@import "tailwindcss";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --heading: #020617;
+  --muted-strong: #334155;
+  --muted: #475569;
+  --soft: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+}
+
+p,
+label,
+span,
+li,
+a,
+small,
+strong,
+legend {
+  color: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+  color: #0f172a;
+}
+
+::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.text-slate-400 {
+  color: #64748b !important;
+}
+
+.text-slate-500 {
+  color: #475569 !important;
+}
+
+.text-slate-600 {
+  color: #334155 !important;
+}
+
+.admin-shell {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.14), transparent 28%),
+    radial-gradient(circle at 100% 10%, rgba(99, 102, 241, 0.18), transparent 30%),
+    linear-gradient(180deg, #0a1220 0%, #0b1324 100%);
+}
+
+.admin-main {
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96) 0%, rgba(241, 245, 249, 0.92) 100%),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 40%);
+  color: #0f172a;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.admin-main h1,
+.admin-main h2,
+.admin-main h3,
+.admin-main h4,
+.admin-main h5,
+.admin-main h6 {
+  color: #020617;
+}
+
+.admin-main p,
+.admin-main label,
+.admin-main span,
+.admin-main small,
+.admin-main legend,
+.admin-main li,
+.admin-main dt,
+.admin-main dd {
+  color: inherit;
+}
+
+.admin-main .text-slate-400 {
+  color: #64748b !important;
+}
+
+.admin-main .text-slate-500 {
+  color: #475569 !important;
+}
+
+.admin-main .text-slate-600 {
+  color: #334155 !important;
+}
+
+.admin-main .opacity-20 {
+  opacity: 0.55 !important;
+}
+
+.admin-main .opacity-30 {
+  opacity: 0.68 !important;
+}
+
+.admin-main .opacity-40 {
+  opacity: 0.78 !important;
+}
+
+.admin-main .opacity-50 {
+  opacity: 0.86 !important;
+}
+
+.admin-main .rounded-3xl,
+.admin-main .rounded-\[4rem\] {
+  border-radius: 1.5rem !important;
+}
+
+.admin-main .rounded-2xl,
+.admin-main .rounded-\[3rem\] {
+  border-radius: 1.25rem !important;
+}
+
+.admin-main .rounded-xl,
+.admin-main .rounded-\[2\.5rem\],
+.admin-main .rounded-\[2rem\] {
+  border-radius: 1rem !important;
+}
+
+.admin-main .rounded-\[1\.5rem\],
+.admin-main .rounded-\[1\.25rem\] {
+  border-radius: 0.9rem !important;
+}
+
+.admin-main header.bg-white,
+.admin-main section.bg-white,
+.admin-main article.bg-white,
+.admin-main footer.bg-white,
+.admin-main div.bg-white.rounded-xl,
+.admin-main div.bg-white.rounded-2xl,
+.admin-main div.bg-white.rounded-3xl,
+.admin-main div.bg-white.rounded-\[2\.5rem\],
+.admin-main div.bg-white.rounded-\[3rem\],
+.admin-main div.bg-white.rounded-\[4rem\] {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.84) 100%) !important;
+  backdrop-filter: blur(18px);
+  border-color: rgba(148, 163, 184, 0.18) !important;
+  box-shadow: 0 18px 50px -24px rgba(15, 23, 42, 0.25), 0 10px 24px -20px rgba(99, 102, 241, 0.24) !important;
+}
+
+.admin-main .bg-slate-50,
+.admin-main .bg-slate-50\/30,
+.admin-main .bg-slate-50\/50,
+.admin-main .bg-indigo-50\/30,
+.admin-main .bg-indigo-50\/50 {
+  background: rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(12px);
+}
+
+.admin-main .border-slate-200,
+.admin-main .border-slate-100,
+.admin-main .border-indigo-200\/50,
+.admin-main .border-slate-200\/50,
+.admin-main .border-slate-100\/50 {
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+.admin-main input,
+.admin-main textarea,
+.admin-main select {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border-color: rgba(148, 163, 184, 0.28) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.admin-main input:focus,
+.admin-main textarea:focus,
+.admin-main select:focus {
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12) !important;
+}
+
+.admin-main button,
+.admin-main a {
+  transition: all 180ms ease;
+}
+
+.tiptap-editor:empty::before,
+.tiptap-editor p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #94a3b8;
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap-editor .ProseMirror {
+  min-height: inherit;
+  outline: none;
+}
+
+.tiptap-editor h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-editor h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.tiptap-editor h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap-editor p {
+  margin-bottom: 0.9rem;
+}
+
+.tiptap-editor ul,
+.tiptap-editor ol {
+  margin: 0 0 1rem 1.4rem;
+}
+
+.tiptap-editor ul {
+  list-style: disc;
+}
+
+.tiptap-editor ol {
+  list-style: decimal;
+}
+
+.tiptap-editor blockquote {
+  border-left: 3px solid rgba(99, 102, 241, 0.5);
+  padding-left: 1rem;
+  color: #475569;
+  margin: 1rem 0;
+}
+
+.tiptap-editor table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  table-layout: fixed;
+}
+
+.tiptap-editor th,
+.tiptap-editor td {
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+.tiptap-editor th {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.tiptap-editor .selectedCell:after {
+  background: rgba(99, 102, 241, 0.1);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.tiptap-editor .column-resize-handle {
+  background: #6366f1;
+  bottom: -2px;
+  pointer-events: none;
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 4px;
+}
+
+.tiptap-editor .resize-cursor {
+  cursor: col-resize;
+}
+
+.tiptap-editor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.admin-main::-webkit-scrollbar,
+.admin-main *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.admin-main::-webkit-scrollbar-track,
+.admin-main *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-main::-webkit-scrollbar-thumb,
+.admin-main *::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.admin-main::-webkit-scrollbar-thumb:hover,
+.admin-main *::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.45);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dynamic-content h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -0.05em; line-height: 1.1; }
+.dynamic-content h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1.25rem; margin-top: 2rem; letter-spacing: -0.025em; }
+.dynamic-content h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; margin-top: 1.5rem; }
+.dynamic-content p { font-size: 1.125rem; line-height: 1.75; margin-bottom: 1.5rem; color: #334155; }
+.dynamic-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.dynamic-content ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.dynamic-content li { margin-bottom: 0.5rem; color: #334155; }
+.dynamic-content a { color: #3730a3; text-decoration: underline; transition: opacity 0.2s; }
+.dynamic-content a:hover { opacity: 0.8; }
+.dynamic-content img { border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); margin: 2.5rem 0; max-width: 100%; height: auto; }
+.dynamic-content blockquote { border-left: 4px solid #4f46e5; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; font-size: 1.25rem; color: #334155; }

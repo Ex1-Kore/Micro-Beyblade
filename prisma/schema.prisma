@@ -1,0 +1,205 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  date        DateTime
+  thumbnail   String?
+  gallery     String[] @default([])
+  videoLink   String?
+  projectUrl  String?
+  toolsUsed   String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  projects  Project[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model SiteConfig {
+  id              String   @id @default("default")
+  siteName        String   @default("Micro Headless CMS")
+  domain          String   @default("")
+  language        String   @default("th")
+  timezone        String   @default("Asia/Bangkok")
+  logoUrl         String   @default("")
+  logoAlt         String   @default("Logo")
+  showLogoText    Boolean  @default(true)
+  navStyle        String   @default("fixed")
+  navBgColor      String   @default("#0ea5e9")
+  navTextColor    String   @default("#ffffff")
+  showHero        Boolean  @default(true)
+  heroStyle       String   @default("centered")
+  heroHeading     String   @default("Welcome to your site")
+  heroSubheading  String   @default("Use the CMS to manage reusable content for any frontend application")
+  heroBgColor     String   @default("#f0f9ff")
+  heroTextColor   String   @default("#0f172a")
+  heroImageUrl    String   @default("")
+  heroBtnLabel    String   @default("Explore content")
+  heroBtnColor    String   @default("#f59e0b")
+  primaryColor    String   @default("#0ea5e9")
+  accentColor     String   @default("#f59e0b")
+  bgColor         String   @default("#f8fafc")
+  textColor       String   @default("#1e293b")
+  fontFamily      String   @default("Inter")
+  layoutStyle     String   @default("grid")
+  showSidebar     Boolean  @default(false)
+  sidebarPosition String   @default("left")
+  footerCopyright String   @default("© 2024 My Site")
+  footerBgColor   String   @default("#1e293b")
+  footerTextColor String   @default("#94a3b8")
+  discordUrl      String   @default("")
+  githubUrl       String   @default("")
+  twitterUrl      String   @default("")
+  linkedinUrl     String   @default("")
+  privacyUrl      String   @default("")
+  termsUrl        String   @default("")
+  cookiePolicyUrl String   @default("")
+  marketplaceUrl  String   @default("")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model MenuItem {
+  id            String   @id @default(uuid())
+  label         String
+  url           String
+  order         Int      @default(0)
+  isExternal    Boolean  @default(false)
+  isVisible     Boolean  @default(true)
+  showInNavbar  Boolean  @default(true)
+  showInSidebar Boolean  @default(false)
+  showInFooter  Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Page {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  content     String   @default("") // LEGACY HTML — เก็บไว้ตลอด migration (8.2), ตัดทีหลัง
+  contentJson Json?    // 8.2: JSON block document versioned {version, doc} — valid โดย lib/content/block-document.ts
+  contentVer  Int      @default(1) // 8.2: version ของ block document (ปัจจุบัน = 1)
+  excerpt     String   @default("")
+  sourceType  String   @default("manual")
+  sourceRef   String?
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model StaffMember {
+  id                String   @id @default(uuid())
+  slug              String   @unique
+  name              String
+  role              String
+  email             String?
+  bio               String   @default("")
+  avatarUrl         String?
+  accentColor       String   @default("blue")
+  githubUrl         String?
+  projectUrl        String?
+  projectHighlights String[] @default([])
+  sortOrder         Int      @default(0)
+  featured          Boolean  @default(false)
+  skills            String[] @default([])
+  customLinks       Json?    @default("[]")
+  repos             StaffRepo[]
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model User {
+  id                 String   @id @default(uuid())
+  username           String   @unique
+  password           String
+  role               String   @default("user")
+  mustChangePassword Boolean  @default(false)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Media {
+  id              String   @id @default(cuid())
+  name            String
+  url             String
+  type            String
+  size            Int
+  storageProvider String   @default("local")
+  storageKey      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model SecretStore {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  provider  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AiAutoPostCampaign {
+  id                 String   @id @default(cuid())
+  name               String
+  provider           String   @default("google-ai-studio")
+  model              String   @default("gemini-2.5-flash")
+  topic              String
+  systemPrompt       String   @default("")
+  slugPrefix         String
+  timezone           String   @default("Asia/Bangkok")
+  scheduleType       String   @default("daily")
+  scheduleTime       String   @default("09:00")
+  publishAsPublished Boolean  @default(false)
+  isEnabled          Boolean  @default(false)
+  lastRunAt          DateTime?
+  nextRunAt          DateTime?
+  lastResult         String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  runs               AiAutoPostRun[]
+}
+
+model AiAutoPostRun {
+  id         String             @id @default(cuid())
+  campaignId String
+  campaign   AiAutoPostCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  title      String?
+  slug       String?
+  status     String             @default("queued")
+  prompt     String             @default("")
+  output     String             @default("")
+  error      String?
+  ranAt      DateTime           @default(now())
+
+  @@index([campaignId, ranAt])
+}
+
+model StaffRepo {
+  id            String      @id @default(uuid())
+  name          String
+  demoUrl       String?
+  sourceUrl     String?
+  landingUrl    String?
+  staffMemberId String
+  staffMember   StaffMember @relation(fields: [staffMemberId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}

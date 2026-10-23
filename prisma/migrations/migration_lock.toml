@@ -1,0 +1,2 @@
+# prisma migrate diff
+provider = "postgresql"
