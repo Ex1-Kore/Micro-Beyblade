@@ -1,0 +1,87 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "BEYBLADE X" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f1e5]:
+        - link "Home" [ref=f1e6] [cursor=pointer]:
+          - /url: /
+        - link "Blades" [ref=f1e7] [cursor=pointer]:
+          - /url: /projects
+  - main [ref=f1e8]:
+    - generic [ref=f1e9]:
+      - generic [ref=f1e12]:
+        - paragraph [ref=f1e13]: Micro-Beyblade
+        - heading "BEYBLADE X" [level=1] [ref=f1e14]
+        - paragraph [ref=f1e15]: Spin. Battle. Win. Explore the latest Beyblade X lineup and join the arena.
+        - generic [ref=f1e16]:
+          - link "Explore Blades" [ref=f1e17] [cursor=pointer]:
+            - /url: /projects
+          - link "View All Blades" [ref=f1e18] [cursor=pointer]:
+            - /url: /projects
+      - alert [ref=f1e20]:
+        - paragraph [ref=f1e21]: CMS ตอบกลับด้วยสถานะ 500
+        - paragraph [ref=f1e22]: CMS API responded 500 for /api/site-config
+      - generic [ref=f1e24]:
+        - heading "Product Lines" [level=2] [ref=f1e25]
+        - paragraph [ref=f1e26]: Choose your series and build your perfect Beyblade.
+        - generic [ref=f1e27]:
+          - link "🔵 BX Line Basic series Explore →" [ref=f1e28] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e29]: 🔵
+            - heading "BX Line" [level=3] [ref=f1e30]
+            - paragraph [ref=f1e31]: Basic series
+            - generic [ref=f1e32]: Explore →
+          - link "🟣 UX Line Ultimate series Explore →" [ref=f1e33] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e34]: 🟣
+            - heading "UX Line" [level=3] [ref=f1e35]
+            - paragraph [ref=f1e36]: Ultimate series
+            - generic [ref=f1e37]: Explore →
+          - link "🟠 CX Line Custom series Explore →" [ref=f1e38] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e39]: 🟠
+            - heading "CX Line" [level=3] [ref=f1e40]
+            - paragraph [ref=f1e41]: Custom series
+            - generic [ref=f1e42]: Explore →
+          - link "🛠️ Tools Launchers & accessories Explore →" [ref=f1e43] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e44]: 🛠️
+            - heading "Tools" [level=3] [ref=f1e45]
+            - paragraph [ref=f1e46]: Launchers & accessories
+            - generic [ref=f1e47]: Explore →
+          - link "✖️ X-Over Project Crossover collabs Explore →" [ref=f1e48] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e49]: ✖️
+            - heading "X-Over Project" [level=3] [ref=f1e50]
+            - paragraph [ref=f1e51]: Crossover collabs
+            - generic [ref=f1e52]: Explore →
+          - link "🤝 IP Collaborations Licensed editions Explore →" [ref=f1e53] [cursor=pointer]:
+            - /url: /projects
+            - generic [ref=f1e54]: 🤝
+            - heading "IP Collaborations" [level=3] [ref=f1e55]
+            - paragraph [ref=f1e56]: Licensed editions
+            - generic [ref=f1e57]: Explore →
+      - generic [ref=f1e59]:
+        - heading "Ready to Battle?" [level=2] [ref=f1e60]
+        - paragraph [ref=f1e61]: Browse the full Beyblade X catalog and find your next winning combo.
+        - link "Browse All Blades" [ref=f1e62] [cursor=pointer]:
+          - /url: /projects
+  - contentinfo [ref=f1e63]:
+    - generic [ref=f1e64]:
+      - generic [ref=f1e65]:
+        - generic [ref=f1e66]: BEYBLADE X
+        - generic [ref=f1e67]:
+          - link "Instagram" [ref=f1e68] [cursor=pointer]:
+            - /url: https://www.instagram.com/beyblade_asia/
+          - link "Facebook" [ref=f1e69] [cursor=pointer]:
+            - /url: https://www.facebook.com/
+          - link "YouTube" [ref=f1e70] [cursor=pointer]:
+            - /url: https://www.youtube.com/
+      - generic [ref=f1e71]:
+        - paragraph [ref=f1e72]: © 2026 Micro-Beyblade. All rights reserved.
+        - paragraph [ref=f1e73]:
+          - text: Powered by Microtronic
+          - link "© 2026 Microtronic Co., Ltd." [ref=f1e74] [cursor=pointer]:
+            - /url: https://microtronic.biz/
+  - alert [ref=f1e75]
